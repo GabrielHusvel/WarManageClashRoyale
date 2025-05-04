@@ -141,6 +141,9 @@ def convert_df_to_csv(df):
 st.set_page_config(layout="wide", page_title="Painel Clash Royale")
 st.title("📊 Painel do Clã - Clash Royale v3")
 
+ip = requests.get('https://clashroyalepy-6ro9smvpmehr6hkzhjzeny.streamlit.app/').text
+st.write(f"IP público de saída do Streamlit Cloud: {ip}")
+
 # --- Barra Lateral (Sidebar) para Configurações ---
 st.sidebar.header("⚙️ Configurações")
 
